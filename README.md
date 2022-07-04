@@ -1,6 +1,14 @@
-# Base de code du projet P6 - Parcours Front-end
+# Fisheye | Site pour photographes indépendants
+Projet 6 : Créez un site accessible pour une plateforme de photographes
 
-## Démarrer le projet
+## Technologies
+- JavaScript
+- HTML5 + règles WCAG
+- CSS3
+- SASS
 
-Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
+## Auteur
+Jean-Kamal Mougammadou
 
+## Accès
+[https://jkml5.github.io/Fisheye/](https://jkml5.github.io/Fisheye/)
