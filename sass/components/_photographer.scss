@@ -1,0 +1,41 @@
+.photographer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__name {
+        color: $color-secondary;
+        font-size: 36px;
+        line-height: 47px;
+        margin-top: 20px;
+    }
+
+    &__city {
+        color: $color-primary;
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    &__tagline {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    &__price {
+        font-size: 9px;
+        line-height: 12px;
+        color: $color-darkgrey;
+    }
+
+    a {
+        text-decoration: none;
+        text-align: center;
+    }
+}
