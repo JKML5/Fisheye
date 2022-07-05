@@ -64,6 +64,8 @@ table {
 body {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .header {
@@ -72,18 +74,17 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 90px;
+  padding: 0 100px;
 }
 
 .header__logo {
   height: 50px;
-  margin-left: 100px;
 }
 
 .header__title {
   color: #901C1C;
   font-size: 36px;
   line-height: 47px;
-  margin-right: 100px;
 }
 
 .photographer_section {
@@ -109,6 +110,8 @@ body {
 .photographer_section article img {
   height: 200px;
   width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .modal {
@@ -163,6 +166,19 @@ form input {
   height: 68px;
   border: none;
   border-radius: 5px;
+}
+
+.button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901C1C;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #contact_modal {
