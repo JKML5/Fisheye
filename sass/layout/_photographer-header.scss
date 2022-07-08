@@ -1,0 +1,35 @@
+.photographer-header {
+    background-color: $color-photographer-header-bg;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    padding: 0 50px;
+
+    &__name {
+        color: $color-secondary;
+        font-size: 64px;
+        line-height: 83px;
+    }
+
+    &__city {
+        color: $color-primary;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    &__tagline {
+        color: $color-photographer-header-font;
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 20px;
+    }
+
+    &__img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

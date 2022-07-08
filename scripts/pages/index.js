@@ -13,8 +13,7 @@ class App {
         photographersInfosData
             .map(photographer => new Photographer(photographer))
             .forEach(photographer => {
-                const photographerModel = photographerFactory(photographer);
-                const userCardDOM = photographerModel.getUserCardDOM();
+                const userCardDOM = photographer.getCardHome();
                 this.photographersSection.appendChild(userCardDOM);
             })
     }

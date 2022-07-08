@@ -94,6 +94,42 @@ body {
   margin-top: 100px;
 }
 
+.photographer-header {
+  background-color: #FAFAFA;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+  padding: 0 50px;
+}
+
+.photographer-header__name {
+  color: #D3573C;
+  font-size: 64px;
+  line-height: 83px;
+}
+
+.photographer-header__city {
+  color: #901C1C;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.photographer-header__tagline {
+  color: #525252;
+  font-size: 18px;
+  line-height: 23px;
+  margin-top: 20px;
+}
+
+.photographer-header__img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .modal {
   border-radius: 5px;
   background-color: #DB8876;
@@ -205,11 +241,5 @@ form input {
 
 #contact_modal {
   display: none;
-}
-
-.photograph-header {
-  background-color: #FAFAFA;
-  height: 300px;
-  margin: 0 100px;
 }
 /*# sourceMappingURL=main.css.map */
