@@ -7,14 +7,14 @@ class App {
     async main() {
         const photographersData = await this.photographersApi.getPhotographers()
 
-        const photographersInfosData = photographersData.photographers;
-        const photographersMediasData = photographersData.media;
+        const photographersInfosData = photographersData.photographers
+        const photographersMediasData = photographersData.media
 
         photographersInfosData
             .map(photographer => new Photographer(photographer))
             .forEach(photographer => {
-                const userCardDOM = photographer.getCardHome();
-                this.photographersSection.appendChild(userCardDOM);
+                const userCardDOM = photographer.getCardHome()
+                this.photographersSection.appendChild(userCardDOM)
             })
     }
 }

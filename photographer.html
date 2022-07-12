@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link href="./public/css/main.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 	<title>Fisheye - photographe </title>
@@ -14,9 +14,8 @@
       <img class="header__logo" src="assets/images/logo.png" alt="Logo" />
     </header>
     <main class="main">
-      <div class="photographer-header">
-        
-      </div>
+      <div class="photographer-header"></div>
+      <div class="photographer-media"></div>
     </main>
     <div id="contact_modal">
       <div class="modal">
@@ -37,6 +36,10 @@
 
     <!-- Models -->
     <script src="./scripts/models/Photographer.js"></script>
+    <script src="./scripts/models/Media.js"></script>
+    
+    <!-- Factories -->
+    <script src="./scripts/factories/MediaFactory.js"></script>
 
     <!-- Api -->
     <script src="./scripts/api/Api.js"></script>

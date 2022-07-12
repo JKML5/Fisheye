@@ -1,21 +1,31 @@
 class App {
     constructor() {
-        this.photographersSection = document.querySelector('.photographer-header')
+        this.photographersHeaderSection = document.querySelector('.photographer-header')
+        this.photographersMediaSection  = document.querySelector('.photographer-media')
         this.photographersApi = new PhotographerApi('./data/photographers.json')
     }
 
     async main(photographerId) {
-        const photographersData = await this.photographersApi.getPhotographers()
-
-        const photographersInfosData = photographersData.photographers
+        // Get datas from JSON
+        const photographersData       = await this.photographersApi.getPhotographers()
+        const photographersInfosData  = photographersData.photographers
         const photographersMediasData = photographersData.media
 
+        // Show photographer's informations
         for (let photographerInfosData of photographersInfosData) {
             if (photographerInfosData.id == photographerId) {
                 const photographer = new Photographer(photographerInfosData)
-                const userCardDOM = photographer.getCardPhotographers()
+                const userCardDOM  = photographer.getCardPhotographers()
 
-                this.photographersSection.innerHTML = userCardDOM.innerHTML
+                this.photographersHeaderSection.innerHTML = userCardDOM.innerHTML
+            }
+        }
+
+        // Show photographer's realisations
+        for (let photographersMediaData of photographersMediasData) {
+            if (photographersMediaData.photographerId == photographerId) {
+                const media = new MediaFactory(photographersMediaData, Media.getType(photographersMediaData))
+                this.photographersMediaSection.append(media.getCardPhotographers())
             }
         }
     }
