@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="./public/css/main.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 	<title>Fisheye - photographe </title>
@@ -15,22 +15,50 @@
     </header>
     <main class="main">
       <div class="photographer-header"></div>
+      <div class="photographer-sort">
+        Trier par
+        <select class="photographer-sort__select">
+          <option>Popularité</option>
+          <option>Date</option>
+          <option>Titre</option>
+        </select>
+      </div>
       <div class="photographer-media"></div>
     </main>
-    <div id="contact_modal">
-      <div class="modal">
-        <header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" alt="Fermer" onclick="closeModal()" />
+
+    <div class="modal_background">
+      <div class="contact_modal">
+        <header class="contact_modal__header">
+          <h2 class="contact_modal__title">Contactez-moi</h2>
+          <img src="assets/icons/close.svg" alt="Fermer" onclick="closeModal()" class="contact_modal__btnClose" />
         </header>
+        <h2 class="contact_modal__title contact_modal__title--marginbottom">Mimi Keel</h2>
         <form>
           <div>
-            <label>Prénom</label>
+            <label class="contact_modal__label">Prénom</label>
             <input />
+          </div>
+          <div>
+            <label class="contact_modal__label">Nom</label>
+            <input />
+          </div>
+          <div>
+            <label class="contact_modal__label">Email</label>
+            <input />
+          </div>
+          <div>
+            <label class="contact_modal__label">Votre message</label>
+            <textarea class="contact_modal__textarea"></textarea>
           </div>
           <button class="button">Envoyer</button>
         </form>
       </div>
+    </div>
+    <!-- /.modal_background -->
+
+    <div class="sticky">
+      <div>287 081 ❤</div>
+      <div>300€ / jour</div>
     </div>
     <script src="./scripts/utils/contactForm.js"></script>
 
@@ -43,6 +71,9 @@
 
     <!-- Api -->
     <script src="./scripts/api/Api.js"></script>
+
+    <!-- Utils -->
+    <script src="./scripts/utils/contactForm.js"></script>
 
     <script src="./scripts/pages/photographer.js"></script>
   </body>

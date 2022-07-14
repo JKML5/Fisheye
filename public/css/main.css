@@ -130,31 +130,63 @@ body {
   object-fit: cover;
 }
 
-.modal {
-  border-radius: 5px;
+.modal_background {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact_modal {
   background-color: #DB8876;
-  width: 50%;
+  border-radius: 5px;
+  width: 700px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   padding: 35px;
-  margin: auto;
+  margin: 60px auto 0 auto;
 }
 
-.modal header {
-  justify-content: space-between;
+.contact_modal__header {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.modal header img {
+.contact_modal__btnClose {
   cursor: pointer;
+  width: 42px;
+  height: 42px;
 }
 
-.modal header h2 {
+.contact_modal__title {
   font-size: 64px;
+  line-height: 83px;
   font-weight: normal;
-  text-align: center;
+}
+
+.contact_modal__title--marginbottom {
+  margin-bottom: 20px;
+}
+
+.contact_modal__label {
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.contact_modal__textarea {
+  width: 100%;
+  height: 170px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
 }
 
 form {
@@ -239,6 +271,27 @@ form input {
   text-align: center;
 }
 
+.photographer-sort {
+  margin: 10px 0 50px 100px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+}
+
+.photographer-sort__select {
+  width: 170px;
+  height: 70px;
+  background-color: #901C1C;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  margin-left: 25px;
+}
+
 .photographer-media {
   display: flex;
   flex-wrap: wrap;
@@ -279,6 +332,22 @@ form input {
 
 .media__likes {
   font-weight: 500;
+}
+
+.sticky {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #DB8876;
+  padding: 20px 35px;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 500;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 380px;
 }
 
 #contact_modal {

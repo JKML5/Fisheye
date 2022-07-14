@@ -1,0 +1,20 @@
+.photographer-sort {
+    margin: 10px 0 50px 100px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+
+    &__select {
+        width: 170px;
+        height: 70px;
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+        margin-left: 25px;
+    }
+}

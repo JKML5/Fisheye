@@ -1,0 +1,15 @@
+.sticky {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-tertiary;
+    padding: 20px 35px;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 500;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 380px;
+}
