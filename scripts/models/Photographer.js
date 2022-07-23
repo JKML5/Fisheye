@@ -64,12 +64,12 @@ class Photographer {
         const blocLeft = document.createElement('div')
         blocLeft.setAttribute('class', 'photograper-header__left')
 
-        const name = document.createElement('h2')
+        const name = document.createElement('h1')
         name.textContent = this._name
         name.setAttribute('class', 'photographer-header__name')
         blocLeft.appendChild(name)
 
-        const city = document.createElement('p')
+        const city = document.createElement('h2')
         city.setAttribute('class', 'photographer-header__city')
         city.textContent = this.localization
         blocLeft.appendChild(city)
@@ -82,6 +82,7 @@ class Photographer {
         const contactButton = document.createElement('button')
         contactButton.setAttribute('class', 'button')
         contactButton.setAttribute('onclick', 'displayModal()')
+        contactButton.setAttribute('role', 'Contact')
         contactButton.textContent = 'Contactez-moi'
 
         const img = document.createElement('img')

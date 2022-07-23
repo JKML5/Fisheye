@@ -7,20 +7,20 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="./public/css/main.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-	<title>Fisheye - photographe </title>
+    <title>Fisheye - photographe </title>
   </head>
   <body>
     <header class="header">
-      <img class="header__logo" src="assets/images/logo.png" alt="Logo" />
+      <a href="./"><img class="header__logo" src="assets/images/logo.png" alt="Fisheye Home page" /></a>
     </header>
     <main class="main">
-      <div class="photographer-header"></div>
+      <aside class="photographer-header"></aside>
       <div class="photographer-sort">
-        Trier par
-        <select class="photographer-sort__select">
-          <option>Popularité</option>
-          <option>Date</option>
-          <option>Titre</option>
+        <label for="sortBy">Trier par</label>
+        <select class="photographer-sort__select" id="sortBy" role="sort">
+          <option class="photographer-sort__option">Popularité</option>
+          <option class="photographer-sort__option">Date</option>
+          <option class="photographer-sort__option">Titre</option>
         </select>
       </div>
       <div class="photographer-media"></div>
@@ -35,21 +35,25 @@
         <h2 class="contact_modal__title contact_modal__title--marginbottom">Mimi Keel</h2>
         <form>
           <div>
-            <label class="contact_modal__label">Prénom</label>
-            <input />
+            <label for="firstName" class="contact_modal__label">Prénom</label>
+            <input type="text" name="firstName" id="firstName" />
           </div>
+
           <div>
-            <label class="contact_modal__label">Nom</label>
-            <input />
+            <label for="lastName" class="contact_modal__label">Nom</label>
+            <input type="text" name="lastName" id="lastName" />
           </div>
+
           <div>
-            <label class="contact_modal__label">Email</label>
-            <input />
+            <label for="email" class="contact_modal__label">Email</label>
+            <input type="text" name="email" id="email" />
           </div>
+
           <div>
-            <label class="contact_modal__label">Votre message</label>
-            <textarea class="contact_modal__textarea"></textarea>
+            <label for="message" class="contact_modal__label">Votre message</label>
+            <textarea name="message" id="message" class="contact_modal__textarea"></textarea>
           </div>
+
           <button class="button">Envoyer</button>
         </form>
       </div>

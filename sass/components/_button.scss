@@ -9,4 +9,9 @@
     background-color: $color-primary;
     border-radius: 5px;
     cursor: pointer;
+
+    &:hover, &:focus {
+        background-color: $color-tertiary;
+        color: $color-black;
+    }
 }
