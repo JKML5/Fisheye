@@ -73,9 +73,20 @@ class MediaVideo extends Media {
         cardDOM.setAttribute('class', 'media')
 
         const video = document.createElement('video')
+        const videoSource = document.createElement('source')
+        const videoLink = document.createElement('a')
+        video.setAttribute('controls', '')
+        video.setAttribute('crossorigin', '')
+        video.setAttribute('playsinline', '')
         video.setAttribute('class', 'media__video')
-        video.setAttribute('src', this.video)
-        video.setAttribute('alt', '')
+        videoSource.setAttribute('src', this.video)
+        videoSource.setAttribute('type', 'video/mp4')
+        videoLink.setAttribute('href', this.video)
+        videoLink.setAttribute('download', '')
+        videoLink.innerText = 'Télécharger';
+
+        video.appendChild(videoSource)
+        video.appendChild(videoLink)
         cardDOM.appendChild(video)
 
         const divHeading = document.createElement('div')
