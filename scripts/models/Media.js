@@ -37,6 +37,7 @@ class MediaImage extends Media {
         img.setAttribute('class', 'media__img')
         img.setAttribute('src', this.image)
         img.setAttribute('alt', '')
+        img.setAttribute('onclick', 'displayLightbox()')
         cardDOM.appendChild(img)
         
         const divHeading = document.createElement('div')

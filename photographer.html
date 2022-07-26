@@ -61,12 +61,26 @@
     </div>
     <!-- /.modal_background -->
 
+    <div class="lightbox__background">
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__link">
+          <img src="assets/icons/lightbox-left.svg" alt="Fermer" class="lightbox__btn lightbox__btn--left" />
+        </a>
+        <img class="lightbox__img" src="assets/media/243/Travel_Lonesome.jpg" alt="">
+        <a href="#" class="lightbox__link">
+          <img src="assets/icons/lightbox-right.svg" alt="Fermer" class="lightbox__btn lightbox__btn--right" />
+        </a>
+        <a href="#" class="lightbox__link" id="lightbox__close">
+          <img src="assets/icons/lightbox-close.svg" alt="Fermer" onclick="closeLightbox()" class="lightbox__btn lightbox__btn--close" />
+        </a>
+      </div>
+    </div>
+
     <div class="sticky">
       <div>287 081 ❤</div>
       <div>300€ / jour</div>
     </div>
-    <script src="./scripts/utils/contactForm.js"></script>
-
+    
     <!-- Models -->
     <script src="./scripts/models/Photographer.js"></script>
     <script src="./scripts/models/Media.js"></script>
@@ -78,9 +92,9 @@
     <script src="./scripts/api/Api.js"></script>
 
     <!-- Utils -->
-    <script src="./scripts/utils/contactForm.js"></script>
-
     <script src="./scripts/pages/photographer.js"></script>
+    <script src="./scripts/utils/contactForm.js"></script>
+    <script src="./scripts/utils/lightbox.js"></script>
     <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
   </body>
 </html>

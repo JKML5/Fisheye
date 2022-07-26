@@ -130,65 +130,6 @@ body {
   object-fit: cover;
 }
 
-.modal_background {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.contact_modal {
-  background-color: #DB8876;
-  border-radius: 5px;
-  width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 35px;
-  margin: 60px auto 0 auto;
-}
-
-.contact_modal__header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contact_modal__btnClose {
-  cursor: pointer;
-  width: 42px;
-  height: 42px;
-}
-
-.contact_modal__title {
-  font-size: 64px;
-  line-height: 83px;
-  font-weight: normal;
-}
-
-.contact_modal__title--marginbottom {
-  margin-bottom: 20px;
-}
-
-.contact_modal__label {
-  font-size: 36px;
-  line-height: 47px;
-}
-
-.contact_modal__textarea {
-  width: 100%;
-  height: 170px;
-  border: none;
-  border-radius: 5px;
-  resize: none;
-}
-
 form {
   display: flex;
   width: 100%;
@@ -366,6 +307,94 @@ form input {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 380px;
+}
+
+.modal_background {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact_modal {
+  background-color: #DB8876;
+  border-radius: 5px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px;
+  margin: 60px auto 0 auto;
+}
+
+.contact_modal__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact_modal__btnClose {
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+}
+
+.contact_modal__title {
+  font-size: 64px;
+  line-height: 83px;
+  font-weight: normal;
+}
+
+.contact_modal__title--marginbottom {
+  margin-bottom: 20px;
+}
+
+.contact_modal__label {
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.contact_modal__textarea {
+  width: 100%;
+  height: 170px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.lightbox__background {
+  display: none;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.lightbox__content {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.lightbox__img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.lightbox__link {
+  margin: 0 35px;
 }
 
 #contact_modal {

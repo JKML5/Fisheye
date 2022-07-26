@@ -1,0 +1,30 @@
+.lightbox {
+    &__background {
+        display: none;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    &__img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    &__link {
+        margin: 0 35px;
+    }
+}
