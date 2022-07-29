@@ -1,12 +1,14 @@
 class Photographer {
     constructor(data) {
-        this._name = data.name
-        this._id = data.id
-        this._city = data.city
-        this._country = data.country
-        this._tagline = data.tagline
-        this._price = data.price
+        this._name     = data.name
+        this._id       = data.id
+        this._city     = data.city
+        this._country  = data.country
+        this._tagline  = data.tagline
+        this._price    = data.price
         this._portrait = data.portrait
+        this._medias   = []
+        this._nbLikes  = 0
     }
 
     get picture() {
@@ -19,6 +21,12 @@ class Photographer {
 
     get price() {
         return `${this._price}€/jour`
+    }
+
+    addMedia(media) {
+        this._medias.push(media)
+
+        this._nbLikes += media._likes
     }
 
     getCardHome() {
@@ -95,5 +103,57 @@ class Photographer {
         cardDOM.appendChild(img)
 
         return (cardDOM)
+    }
+
+    /**
+     * Display lightbox
+     * @param int mediaId 
+     */
+    displayLightbox(mediaId) {
+        // DOM Elements
+        const modal        = document.querySelector('.lightbox__background')
+        const content      = document.querySelector('.lightbox__content')
+        const nextLink     = document.querySelector('.lightbox__link--right')
+        const previousLink = document.querySelector('.lightbox__link--left')
+
+        for (let i in this._medias) {
+            var media = this._medias[i]
+
+            if (media._id == mediaId) {
+                const cardDOM = document.createElement('div')
+                cardDOM.setAttribute('class', 'lightbox__content')
+
+                const img = document.createElement('img')
+                img.setAttribute('class', 'lightbox__img')
+                img.setAttribute('src', media.image)
+                img.setAttribute('alt', '')
+
+                const desc = document.createElement('div')
+                desc.setAttribute('class', 'lightbox__desc')
+                desc.textContent = media. _title
+
+                cardDOM.appendChild(img)
+                cardDOM.appendChild(desc)
+
+                content.innerHTML = cardDOM.innerHTML
+
+                // Newt media - If last element, the next element will be the first one
+                let nextMedia = this._medias[parseInt(i) + 1]
+                if (nextMedia === undefined) {
+                    nextMedia = this._medias[0]
+                }
+                nextLink.setAttribute('data-id', nextMedia._id)
+
+                // Previous media - If first element, the previous element will be the last one
+                let previousMedia = this._medias[parseInt(i) - 1]
+                if (previousMedia === undefined) {
+                    previousMedia = this._medias[this._medias.length - 1]
+                }
+
+                previousLink.setAttribute('data-id', previousMedia._id)
+            }
+        }
+
+        modal.style.display = 'flex'
     }
 }

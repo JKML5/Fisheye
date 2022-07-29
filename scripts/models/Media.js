@@ -33,12 +33,17 @@ class MediaImage extends Media {
         const cardDOM = document.createElement('article')
         cardDOM.setAttribute('class', 'media')
 
+        const imgLink = document.createElement('a')
+        imgLink.setAttribute('class', 'media__link')
+        imgLink.setAttribute('href', '#')
+        imgLink.setAttribute('data-id', this._id)
+
         const img = document.createElement('img')
         img.setAttribute('class', 'media__img')
         img.setAttribute('src', this.image)
         img.setAttribute('alt', '')
-        img.setAttribute('onclick', 'displayLightbox()')
-        cardDOM.appendChild(img)
+        imgLink.appendChild(img)
+        cardDOM.appendChild(imgLink)
         
         const divHeading = document.createElement('div')
         divHeading.setAttribute('class', 'media__heading')
@@ -47,12 +52,23 @@ class MediaImage extends Media {
         divHeadingTitle.setAttribute('class', 'media__title')
         divHeadingTitle.textContent = this._title
 
+        const linkHeadingLikes = document.createElement('a')
+        linkHeadingLikes.setAttribute('href', '#')
+        linkHeadingLikes.setAttribute('class', 'media__link--likes')
+
         const divHeadingLikes = document.createElement('span')
         divHeadingLikes.setAttribute('class', 'media__likes')
-        divHeadingLikes.textContent = this._likes + ' ❤'
+        divHeadingLikes.textContent = ' ❤'
+    
+        const divHeadingLikesValue = document.createElement('span')
+        divHeadingLikesValue.setAttribute('class', 'media__likes--value')
+        divHeadingLikesValue.textContent = this._likes
 
+
+        divHeadingLikes.appendChild(divHeadingLikesValue)
+        linkHeadingLikes.appendChild(divHeadingLikes)
         divHeading.appendChild(divHeadingTitle)
-        divHeading.appendChild(divHeadingLikes)
+        divHeading.appendChild(linkHeadingLikes)
         cardDOM.appendChild(divHeading)
 
         return (cardDOM)
@@ -84,7 +100,7 @@ class MediaVideo extends Media {
         videoSource.setAttribute('type', 'video/mp4')
         videoLink.setAttribute('href', this.video)
         videoLink.setAttribute('download', '')
-        videoLink.innerText = 'Télécharger';
+        videoLink.innerText = 'Télécharger'
 
         video.appendChild(videoSource)
         video.appendChild(videoLink)

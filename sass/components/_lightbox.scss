@@ -12,10 +12,22 @@
         background-color: rgba(255, 255, 255, 0.8);
     }
 
-    &__content {
+    &__wrapper {
+        max-width: 1000px;
         display: flex;
         align-items: center;
         margin: 0 auto;
+        position: relative;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__desc {
+        font-size: 24px;
+        line-height: 31px;
+        color: $color-primary;
     }
 
     &__img {
@@ -26,5 +38,16 @@
 
     &__link {
         margin: 0 35px;
+
+        &--close {
+            position: absolute;
+            right: 15px;
+            top: 5px;
+            width: 32px;
+            height: 32px;
+            opacity: 1;
+            cursor: pointer;
+            transform: scale(0.7);
+        }
     }
 }
