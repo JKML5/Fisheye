@@ -21,7 +21,7 @@ class App {
                 // Get photographer's medias
                 for (let photographersMediaData of photographersData.media) {
                     if (photographersMediaData.photographerId == photographerId) {
-                        photographer.addMedia(new MediaFactory(photographersMediaData, Media.getType(photographersMediaData))) 
+                        photographer.addMedia(new MediaFactory(photographersMediaData)) 
                     }
                 }
 
@@ -43,18 +43,18 @@ class App {
                 // Click on thumbnails -> launch modal
                 document.querySelectorAll('.media__link').forEach(item => {
                     item.addEventListener('click', function () {
-                        photographer.displayLightbox(this.dataset.id)
+                        photographer.displayLightbox(this.dataset.id, this.dataset.type)
                     }, false)
                 })
 
                 // Click on next button -> launch modal with next image
                 document.querySelector('.lightbox__link--right').addEventListener('click', function () {
-                    photographer.displayLightbox(this.dataset.id)
+                    photographer.displayLightbox(this.dataset.id, this.dataset.type)
                 }, false)
 
                 // Click on previous button -> launch modal with previous image
                 document.querySelector('.lightbox__link--left').addEventListener('click', function () {
-                    photographer.displayLightbox(this.dataset.id)
+                    photographer.displayLightbox(this.dataset.id, this.dataset.type)
                 }, false)
 
                 // Click on close button -> close lightbox
@@ -65,9 +65,9 @@ class App {
                     if (e.code == 'Escape') {
                         closeLightbox()
                     } else if (e.code == 'ArrowRight') {
-                        photographer.displayLightbox(document.querySelector('.lightbox__link--right').dataset.id)
+                        photographer.displayLightbox(document.querySelector('.lightbox__link--right').dataset.id, document.querySelector('.lightbox__link--right').dataset.type)
                     } else if (e.code == 'ArrowLeft') {
-                        photographer.displayLightbox(document.querySelector('.lightbox__link--left').dataset.id)
+                        photographer.displayLightbox(document.querySelector('.lightbox__link--left').dataset.id, document.querySelector('.lightbox__link--left').dataset.type)
                     }
                 })
 
@@ -76,11 +76,11 @@ class App {
                     item.addEventListener('click', function () {
                         if (this.dataset.liked === 'true') {
                             this.dataset.liked = false;
-                            this.querySelector('.media__likes--value').textContent --
+                            this.parentElement.querySelector('.media__likes--value').textContent --
                             nbLikes.innerText --
                         } else if (this.dataset.liked == undefined || this.dataset.liked === 'false') {
                             this.dataset.liked = true;
-                            this.querySelector('.media__likes--value').textContent ++
+                            this.parentElement.querySelector('.media__likes--value').textContent ++
                             nbLikes.innerText ++
                         }
                     }, false)
@@ -102,8 +102,8 @@ class App {
 
             // Librairie Plyr pour des vidéos + accessibles
             // https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css/6964639-guidez-vos-utilisateurs-sur-les-contenus-multimedia
-            const player  = new Plyr('video')
-            window.player = player // Expose player so it can be used from the console
+            // const player  = new Plyr('video')
+            // window.player = player // Expose player so it can be used from the console
         }
 
         /**
@@ -130,8 +130,6 @@ class App {
                     console.error('Valeur de tri non renseignée')
             }
         }
-
-
 
         /**
          * Close Lightbox

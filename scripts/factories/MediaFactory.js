@@ -1,8 +1,8 @@
 class MediaFactory {
-    constructor(data, type) {
-        if (type === 'image') {
+    constructor(data) {
+        if (data.image != undefined && data.image != '') {
             return new MediaImage(data)
-        } else if (type === 'video') {
+        } else if (data.video != undefined && data.video != '') {
             return new MediaVideo(data)
         } else {
             throw 'Unknown type format'

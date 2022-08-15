@@ -109,7 +109,7 @@ class Photographer {
      * Display lightbox
      * @param int mediaId 
      */
-    displayLightbox(mediaId) {
+    displayLightbox(mediaId, mediaType) {
         // DOM Elements
         const modal        = document.querySelector('.lightbox__background')
         const content      = document.querySelector('.lightbox__content')
@@ -123,16 +123,38 @@ class Photographer {
                 const cardDOM = document.createElement('div')
                 cardDOM.setAttribute('class', 'lightbox__content')
 
-                const img = document.createElement('img')
-                img.setAttribute('class', 'lightbox__img')
-                img.setAttribute('src', media.image)
-                img.setAttribute('alt', '')
+                let mediaElement;
+
+                if (mediaType == 'image') {
+                    mediaElement = document.createElement('img')
+                    mediaElement.setAttribute('class', 'lightbox__img')
+                    mediaElement.setAttribute('src', media._image)
+                    mediaElement.setAttribute('alt', '')
+
+                } else if (mediaType == 'video') {
+                    mediaElement = document.createElement('video')
+
+                    const videoSource = document.createElement('source')
+                    const videoLink = document.createElement('a')
+                    mediaElement.setAttribute('controls', '')
+                    mediaElement.setAttribute('crossorigin', '')
+                    mediaElement.setAttribute('playsinline', '')
+                    mediaElement.setAttribute('class', 'media__video')
+                    videoSource.setAttribute('src', media._video)
+                    videoSource.setAttribute('type', 'video/mp4')
+                    videoLink.setAttribute('href', media._video)
+                    videoLink.setAttribute('download', '')
+                    videoLink.innerText = 'Télécharger'
+            
+                    mediaElement.appendChild(videoSource)
+                    mediaElement.appendChild(videoLink)
+                }
 
                 const desc = document.createElement('div')
                 desc.setAttribute('class', 'lightbox__desc')
                 desc.textContent = media. _title
 
-                cardDOM.appendChild(img)
+                cardDOM.appendChild(mediaElement)
                 cardDOM.appendChild(desc)
 
                 content.innerHTML = cardDOM.innerHTML
@@ -143,6 +165,7 @@ class Photographer {
                     nextMedia = this._medias[0]
                 }
                 nextLink.setAttribute('data-id', nextMedia._id)
+                nextLink.setAttribute('data-type', nextMedia._type)
 
                 // Previous media - If first element, the previous element will be the last one
                 let previousMedia = this._medias[parseInt(i) - 1]
@@ -151,6 +174,7 @@ class Photographer {
                 }
 
                 previousLink.setAttribute('data-id', previousMedia._id)
+                previousLink.setAttribute('data-type', previousMedia._type)
             }
         }
 
