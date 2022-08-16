@@ -33,7 +33,7 @@ class MediaImage extends Media {
         const img = document.createElement('img')
         img.setAttribute('class', 'media__img')
         img.setAttribute('src', this._image)
-        img.setAttribute('alt', '')
+        img.setAttribute('alt', 'View ' + this._title)
         imgLink.appendChild(img)
         cardDOM.appendChild(imgLink)
         
@@ -85,6 +85,7 @@ class MediaVideo extends Media {
 
         const video = document.createElement('video')
         video.setAttribute('src', this._video)
+        video.setAttribute('title', this._title)
         video.setAttribute('class', 'media__video')
         videoLink.appendChild(video)
         cardDOM.appendChild(videoLink)

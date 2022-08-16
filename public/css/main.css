@@ -285,6 +285,10 @@ form input {
   width: 80%;
 }
 
+.media__link {
+  display: block;
+}
+
 .media__link--likes {
   text-decoration: none;
 }

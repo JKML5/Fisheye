@@ -12,13 +12,13 @@
   </head>
   <body>
     <header class="header">
-      <a href="./"><img class="header__logo" src="assets/images/logo.png" alt="Fisheye Home page" /></a>
+      <a href="./" tabindex="1"><img class="header__logo" src="assets/images/logo.png" alt="Fisheye Home page" /></a>
     </header>
     <main class="main">
       <aside class="photographer-header"></aside>
       <div class="photographer-sort">
         <label for="sortBy">Trier par</label>
-        <select class="photographer-sort__select" id="sortBy" role="sort">
+        <select class="photographer-sort__select" id="sortBy" role="sort" tabindex="3">
           <option class="photographer-sort__option" value="popularity">Popularité</option>
           <option class="photographer-sort__option" value="date">Date</option>
           <option class="photographer-sort__option" value="title">Titre</option>
@@ -38,25 +38,25 @@
         <form>
           <div>
             <label for="firstName" class="contact_modal__label">Prénom</label>
-            <input type="text" name="firstName" id="firstName" />
+            <input type="text" name="firstName" id="firstName" tabindex="1" />
           </div>
 
           <div>
             <label for="lastName" class="contact_modal__label">Nom</label>
-            <input type="text" name="lastName" id="lastName" />
+            <input type="text" name="lastName" id="lastName" tabindex="2" />
           </div>
 
           <div>
             <label for="email" class="contact_modal__label">Email</label>
-            <input type="text" name="email" id="email" />
+            <input type="text" name="email" id="email" tabindex="3" />
           </div>
 
           <div>
             <label for="message" class="contact_modal__label">Votre message</label>
-            <textarea name="message" id="message" class="contact_modal__textarea"></textarea>
+            <textarea name="message" id="message" class="contact_modal__textarea" tabindex="4"></textarea>
           </div>
 
-          <button class="button">Envoyer</button>
+          <button class="button" tabindex="5">Envoyer</button>
         </form>
       </div>
     </div>

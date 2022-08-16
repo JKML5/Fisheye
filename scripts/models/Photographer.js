@@ -44,6 +44,7 @@ class Photographer {
 
         const link = document.createElement('a')
         link.setAttribute('href', './photographer.html?id=' + this._id)
+        link.setAttribute('tabindex', '3')
         link.appendChild(img)
         link.appendChild(h2)
 
@@ -91,6 +92,7 @@ class Photographer {
         contactButton.setAttribute('class', 'button')
         contactButton.setAttribute('onclick', 'displayModal()')
         contactButton.setAttribute('role', 'Contact')
+        contactButton.setAttribute('tabindex', '2')
         contactButton.textContent = 'Contactez-moi'
 
         const img = document.createElement('img')
