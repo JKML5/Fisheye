@@ -43,7 +43,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -53,12 +53,9 @@ table {
 }
 
 * {
-  box-sizing: border-box;
-  /* Opera/IE 8+ */
-  -moz-box-sizing: border-box;
-  /* Firefox, autres Gecko */
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, autres WebKit */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
 }
 
 body {
@@ -76,11 +73,9 @@ body {
   height: 90px;
   padding: 0 100px;
 }
-
 .header__logo {
   height: 50px;
 }
-
 .header__title {
   color: #901C1C;
   font-size: 36px;
@@ -103,26 +98,22 @@ body {
   margin: 0 100px;
   padding: 0 50px;
 }
-
 .photographer-header__name {
   color: #D3573C;
   font-size: 64px;
   line-height: 83px;
 }
-
 .photographer-header__city {
   color: #901C1C;
   font-size: 24px;
   line-height: 31px;
 }
-
 .photographer-header__tagline {
   color: #525252;
   font-size: 18px;
   line-height: 23px;
   margin-top: 20px;
 }
-
 .photographer-header__img {
   height: 200px;
   width: 200px;
@@ -136,12 +127,10 @@ form {
   flex-direction: column;
   align-items: flex-start;
 }
-
 form label {
   color: #312E2E;
   font-size: 36px;
 }
-
 form div {
   display: flex;
   flex-direction: column;
@@ -149,7 +138,6 @@ form div {
   align-items: self-start;
   margin-bottom: 26px;
 }
-
 form input {
   width: 100%;
   height: 68px;
@@ -169,7 +157,6 @@ form input {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .button:hover, .button:focus {
   background-color: #DB8876;
   color: #000000;
@@ -180,38 +167,32 @@ form input {
   align-items: center;
   flex-direction: column;
 }
-
 .photographer__img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
-
 .photographer__name {
   color: #D3573C;
   font-size: 36px;
   line-height: 47px;
   margin-top: 20px;
 }
-
 .photographer__city {
   color: #901C1C;
   font-size: 13px;
   line-height: 17px;
 }
-
 .photographer__tagline {
   font-size: 10px;
   line-height: 13px;
 }
-
 .photographer__price {
   font-size: 9px;
   line-height: 12px;
   color: #757575;
 }
-
 .photographer a {
   text-decoration: none;
   text-align: center;
@@ -223,7 +204,6 @@ form input {
   line-height: 23px;
   font-weight: 700;
 }
-
 .photographer-sort__select {
   width: 170px;
   height: 70px;
@@ -237,12 +217,10 @@ form input {
   border: none;
   margin-left: 25px;
 }
-
 .photographer-sort__option {
   border: none;
   height: 70px;
 }
-
 .photographer-sort__option:hover {
   background-color: #DB8876;
 }
@@ -255,44 +233,37 @@ form input {
 }
 
 .media {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   width: 350px;
 }
-
 .media__img, .media__video {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 5px;
 }
-
 .media__heading {
   display: flex;
   justify-content: space-between;
   margin: 10px 0 30px 0;
 }
-
 .media__title, .media__likes {
   color: #901C1C;
   font-size: 24px;
   line-height: 31px;
 }
-
 .media__title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 80%;
 }
-
 .media__link {
   display: block;
 }
-
 .media__link--likes {
   text-decoration: none;
 }
-
 .media__likes {
   font-weight: 500;
 }
@@ -335,35 +306,29 @@ form input {
   padding: 35px;
   margin: 60px auto 0 auto;
 }
-
 .contact_modal__header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .contact_modal__btnClose {
   cursor: pointer;
   width: 42px;
   height: 42px;
 }
-
 .contact_modal__title {
   font-size: 64px;
   line-height: 83px;
   font-weight: normal;
 }
-
 .contact_modal__title--marginbottom {
   margin-bottom: 20px;
 }
-
 .contact_modal__label {
   font-size: 36px;
   line-height: 47px;
 }
-
 .contact_modal__textarea {
   width: 100%;
   height: 170px;
@@ -384,7 +349,6 @@ form input {
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.8);
 }
-
 .lightbox__wrapper {
   max-width: 1000px;
   display: flex;
@@ -392,28 +356,23 @@ form input {
   margin: 0 auto;
   position: relative;
 }
-
 .lightbox__content {
   max-width: 70%;
   height: auto;
 }
-
 .lightbox__desc {
   font-size: 24px;
   line-height: 31px;
   color: #901C1C;
   text-align: left;
 }
-
 .lightbox__img {
   width: 100%;
   border-radius: 5px;
 }
-
 .lightbox__link {
   margin: 0 35px;
 }
-
 .lightbox__link--close {
   position: absolute;
   right: 15px;
@@ -427,5 +386,4 @@ form input {
 
 #contact_modal {
   display: none;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -161,6 +161,11 @@ class Photographer {
 
                 content.innerHTML = cardDOM.innerHTML
 
+                // Focus (for launching video by click on space)
+                let currentVideo = document.querySelector('.lightbox__content .media__video')
+                if (currentVideo != undefined)
+                    currentVideo.focus()
+
                 // Newt media - If last element, the next element will be the first one
                 let nextMedia = this._medias[parseInt(i) + 1]
                 if (nextMedia === undefined) {
