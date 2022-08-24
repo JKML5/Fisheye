@@ -55,4 +55,10 @@
         border-radius: 5px;
         resize: none;
     }
+
+    &__input, &__textarea {
+        font-family: "DM Sans", sans-serif;
+        font-size: 20px;
+        padding: 5px 10px;
+    }
 }

@@ -336,6 +336,11 @@ form input {
   border-radius: 5px;
   resize: none;
 }
+.contact_modal__input, .contact_modal__textarea {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  padding: 5px 10px;
+}
 
 .lightbox__background {
   display: none;
