@@ -45,6 +45,9 @@
 
     &__likes {
         font-weight: 500;
+        &:hover {
+            font-size: 26px;
+        }
     }
 }
 

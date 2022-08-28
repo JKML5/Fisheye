@@ -267,6 +267,9 @@ form input {
 .media__likes {
   font-weight: 500;
 }
+.media__likes:hover {
+  font-size: 26px;
+}
 
 .sticky {
   position: fixed;
