@@ -73,7 +73,7 @@ class App {
 
                 // Click like button
                 document.querySelectorAll('.media__link--likes').forEach(item => {
-                    item.addEventListener('click', function () {
+                    item.addEventListener('click', function (e) {
                         if (this.dataset.liked === 'true') {
                             this.dataset.liked = false;
                             this.parentElement.querySelector('.media__likes--value').textContent --
@@ -83,6 +83,8 @@ class App {
                             this.parentElement.querySelector('.media__likes--value').textContent ++
                             nbLikes.innerText ++
                         }
+
+                        e.preventDefault();
                     }, false)
                 })
             }
