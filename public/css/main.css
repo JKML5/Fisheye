@@ -312,8 +312,7 @@ form input {
   justify-content: space-between;
   align-items: center;
 }
-.contact_modal__btnClose {
-  cursor: pointer;
+.contact_modal__btnClose img {
   width: 42px;
   height: 42px;
 }
