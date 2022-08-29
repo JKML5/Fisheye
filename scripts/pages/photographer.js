@@ -2,12 +2,12 @@ class App {
     constructor() {
         this.photographersHeaderSection = document.querySelector('.photographer-header')
         this.photographersMediaSection  = document.querySelector('.photographer-media')
-        this.photographersApi = new PhotographerApi('./data/photographers.json')
+        this.photographersApi           = new PhotographerApi('./data/photographers.json')
     }
 
     async main(photographerId) {
         // Get datas from JSON
-        const photographersData       = await this.photographersApi.getPhotographers()
+        const photographersData = await this.photographersApi.getPhotographers()
 
         // DOM Elements
         const sortBy      = document.getElementById('sortBy')
@@ -37,7 +37,6 @@ class App {
 
                 // Sort selectbox
                 sortBy.addEventListener('change', sortMedia)
-                sortBy.section = this.photographersMediaSection // TODO propre ?
                 sortBy.medias = photographer._medias
 
                 // Click on thumbnails -> launch modal
@@ -119,16 +118,16 @@ class App {
 
             switch (this.value) {
                 case 'date':
-                    showMedia(this.section, [...this.medias].sort(byDate))
+                    showMedia(app.photographersMediaSection, [...this.medias].sort(byDate))
                     break
                 case 'popularity':
-                    showMedia(this.section, [...this.medias].sort(byPopularity))
+                    showMedia(app.photographersMediaSection, [...this.medias].sort(byPopularity))
                     break
                 case 'title':
-                    showMedia(this.section, [...this.medias].sort(byTitle))
+                    showMedia(app.photographersMediaSection, [...this.medias].sort(byTitle))
                     break
                 default:
-                    showMedia(this.section, [...this.medias].sort(byDate))
+                    showMedia(app.photographersMediaSection, [...this.medias].sort(byDate))
                     console.error('Valeur de tri non renseignée')
             }
         }
