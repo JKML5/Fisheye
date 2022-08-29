@@ -26,6 +26,12 @@ function displayModal() {
 
     modal.style.display = "block"
     firstFocusableElement.focus();
+
+    window.addEventListener('keyup', function(e) {
+        if (e.code == 'Escape') {
+            closeModal()
+        }
+    })
 }
 
 function closeModal() {
